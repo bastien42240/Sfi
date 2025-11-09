@@ -1,34 +1,47 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
-
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>accueil</title>
-    <link rel="stylesheet" href="style/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue 3D</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <img src="img/logo-sfi.svg" alt="logo SFI" height="80px">
-    <h1>Présentation des metiers.</h1>
 
-    <div class="grille">
-        <a href="Enzo.html" title="Enzo" class="col-1">
-            <img src="img/Enzo-2.jpg" alt="Enzo" width="320" height="320">
-        </a>
-        <a href="Mikael.html" title="Mikael" class="col-3">
-            <img src="img/Mikael-2.jpg" alt="Mikael" width="320" height="320">
-        </a>
-        <a href="Leon.html" title="Léon" class="col-2">
-            <img src="img/Leon-2.jpg" alt="Léon" width="320" height="320">
-        </a>
-        <a href="Guillaume.html" title="Guillaume" class="col-4">
-            <img src="img/Guillaume-2.jpg" alt="Guillaume" width="320" height="320">
-        </a>
-        <a href="Arnaud.html" title="Arnaud" class="col-2">
-            <img src="img/Arnaud-2.jpg" alt="Arnaud" width="320" height="320">
-        </a>
-    </div>
+  <header>
+    <h1>🧱 Mes créations 3D</h1>
+  </header>
+
+  <main>
+    <div id="objectList" class="grid"></div>
+  </main>
+
+  <!-- Bouton pour créer un objet -->
+  <button id="addObjectBtn" class="floating-button">➕</button>
+
+  <!-- Formulaire simple -->
+  <div id="formContainer" class="hidden">
+    <h2>Ajouter un objet</h2>
+    <form id="objectForm">
+      <label>Nom :</label>
+      <input type="text" id="name" required>
+
+      <label>Description :</label>
+      <textarea id="description" required></textarea>
+
+      <label>Image :</label>
+      <input type="file" id="image" accept="image/*" required>
+
+      <label>Lien MakerWorld :</label>
+      <input type="url" id="link" placeholder="https://makerworld.com/...">
+
+      <div class="buttons">
+        <button type="submit">Ajouter ✅</button>
+        <button type="button" id="cancelBtn">Annuler ❌</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
